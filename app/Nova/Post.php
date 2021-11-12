@@ -34,12 +34,11 @@ class Post extends Resource
             Text::make('Title', 'name')
                 ->rules('required', 'min:5')
                 ->onlyOnForms(),
-            Text::make('Title', 'name')
-                ->rules('required', function () {
+            Text::make('Title', function () {
                     if($this->id === null) return null;
                     $route = route('post.show', $this->id);
                     return <<<HTML
-                        <a href="{{ $route }}" class="no-underline dim text-primary font-bold">{{ this->name }}</a>
+                        <a href="{$route}" class="no-underline dim text-primary font-bold">{$this->name}</a>
                     HTML;
                 })->asHtml(),
             Text::make('URL', 'slug')->onlyOnForms(),

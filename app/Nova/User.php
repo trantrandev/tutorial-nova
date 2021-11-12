@@ -7,6 +7,7 @@ use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Password;
 use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
 class User extends Resource
 {
@@ -105,5 +106,10 @@ class User extends Resource
     public function actions(Request $request)
     {
         return [];
+    }
+
+    public static function relatableQuery(NovaRequest $request, $query)
+    {
+        return $query->where('id', $request->user()->id);
     }
 }
