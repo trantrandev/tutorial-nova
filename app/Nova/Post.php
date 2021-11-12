@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use App\Nova\Filters\AuthorFilter;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Boolean;
@@ -69,7 +70,9 @@ class Post extends Resource
      */
     public function filters(Request $request)
     {
-        return [];
+        return [
+            new AuthorFilter()
+        ];
     }
 
     /**
