@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/blog/{post}', function (\App\Models\Post $post) {
+    return $post;
+})->name('post.show');
