@@ -4,8 +4,44 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab9e3b9eaa558589fda6e89ce7db7636",
+    "content-hash": "865cbffd6e8447be84c2b3c3c02b3177",
     "packages": [
+        {
+            "name": "acme/price-tracker",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./nova-components/PriceTracker",
+                "reference": "854b6eaa891b8871ff69b0295cfe845e091a4e5b"
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Acme\\PriceTracker\\ToolServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Acme\\PriceTracker\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova tool.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
         {
             "name": "asm89/stack-cors",
             "version": "v2.0.3",
@@ -61,6 +97,59 @@
                 "source": "https://github.com/asm89/stack-cors/tree/v2.0.3"
             },
             "time": "2021-03-11T06:42:03+00:00"
+        },
+        {
+            "name": "benjaminhirsch/nova-slug-field",
+            "version": "1.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tomhatzer/nova-slug-field.git",
+                "reference": "d602e3033ed9c0ba2928a8ce1a7e8c7a9188c048"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tomhatzer/nova-slug-field/zipball/d602e3033ed9c0ba2928a8ce1a7e8c7a9188c048",
+                "reference": "d602e3033ed9c0ba2928a8ce1a7e8c7a9188c048",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Benjaminhirsch\\NovaSlugField\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Benjaminhirsch\\NovaSlugField\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Hirsch",
+                    "email": "mail@benjaminhirsch.net",
+                    "homepage": "https://www.benjaminhirsch.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel Nova field to generate a slugs.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "support": {
+                "issues": "https://github.com/benjaminhirsch/nova-slug-field/issues",
+                "source": "https://github.com/tomhatzer/nova-slug-field/tree/1.2.6"
+            },
+            "time": "2020-09-23T17:10:16+00:00"
         },
         {
             "name": "brick/math",

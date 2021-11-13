@@ -2,16 +2,21 @@
     "name": "laravel/laravel",
     "type": "project",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "benjaminhirsch/nova-slug-field": "^1.2",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.65",
+        "laravel/nova": "*",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "laravel/nova": "*"
+        "acme/price-tracker": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -64,6 +69,30 @@
         "nova": {
             "type": "path",
             "url": "./nova"
+        },
+        "0": {
+            "type": "path",
+            "url": "./nova-components/PriceTracker"
+        },
+        "1": {
+            "type": "path",
+            "url": "./nova-components/PriceTracker"
+        },
+        "2": {
+            "type": "path",
+            "url": "./nova-components/PriceTracker"
+        },
+        "3": {
+            "type": "path",
+            "url": "./nova-components/PriceTracker"
+        },
+        "4": {
+            "type": "path",
+            "url": "./nova-components/PriceTracker"
+        },
+        "5": {
+            "type": "path",
+            "url": "./nova-components/PriceTracker"
         }
     }
 }
