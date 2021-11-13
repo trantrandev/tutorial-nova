@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use App\Nova\Actions\AttributeSetter;
 use App\Nova\Filters\AuthorFilter;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\BelongsTo;
@@ -94,6 +95,9 @@ class Post extends Resource
      */
     public function actions(Request $request)
     {
-        return [];
+        return [
+            new AttributeSetter('Make Online', 'online', 1),
+            new AttributeSetter('Make Offline', 'online', 0)
+        ];
     }
 }
